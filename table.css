@@ -1,0 +1,180 @@
+html,body{
+	margin:0px;
+	padding:0px;
+}
+
+body {
+	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	background: #eeeeee;
+	color: #333333;
+	width: 520px;
+	margin: 0 auto;
+}
+
+#content{
+	background: #fff;
+	padding: 20px;
+	margin-bottom: 40px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+}
+
+#content h1 {
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#content input[type="text"],select,button{
+	width:120px;
+	font-size: 18px;
+	font-family: inherit;
+	line-height: 1.4em;
+	border: 0;
+	outline: none;
+	padding: 6px;
+	border: 1px solid #999999;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+
+#content button{
+	width:76px;
+	padding:3px;
+	cursor:pointer;
+}
+
+#content footer {
+	margin: 0 -20px -20px -20px;
+	overflow: hidden;
+	color: #555555;
+	background: #f4fce8;
+	border-top: 1px solid #ededed;
+	padding: 0 20px;
+	line-height: 37px;
+	border-radius: 0 0 5px 5px;
+}
+
+#main{
+	margin:20px 0 0 0;
+	display: none;
+}
+
+#main h1{
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#main table tr{
+	word-break:break-all;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+
+#main table .selected{
+	color: #777777;
+}
+
+#main table tr td{
+	width:73px;
+	height:32px;
+	font-size: 18px;
+	font-family: inherit;
+	line-height: 1.4em;
+	outline: none;
+	padding:2px;
+	text-align:center;
+}
+
+#main table #thead td:first-child{
+	position:absolute;
+}
+
+#main table #thead input{
+	position:relative;
+	top:4px;
+}
+
+#main table #thead label{
+	position:absolute;
+	left:50px;
+	top:5px;
+	font-size:16px;
+	font-weight:bold;
+}
+
+#student-list .destroy {
+	position: relative;
+	left: 25px;
+	display: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background: url(destroy.png) no-repeat;
+}
+
+#student-list tr:hover .destroy {
+  	display: block;
+}
+
+#student-list .destroy:hover {
+  	background-position: 0 -20px;
+}
+
+#student-list .edit{
+	display:none;
+}
+
+#student-list .editing .show{
+	display:none;
+}
+
+#student-list .editing .edit{
+	display:block;
+}
+
+#student-list .editing input{
+	width:44px;
+	height:18px;
+	font-family: inherit;
+}
+
+#student-list .editing select{
+	width:72px;
+	height:32px;
+	font-family: inherit;
+	font-size: 15px;
+}
+
+
+
+#clear-selected{
+	float: right;
+	line-height: 20px;
+	text-decoration: none;
+	background: rgba(0, 0, 0, 0.1);
+	color: #555555;
+	font-size: 11px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding: 0 10px 1px;
+	cursor: pointer;
+	border-radius: 12px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+}
+
+#clear-selected:hover{
+	background: rgba(0, 0, 0, 0.15);
+	box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+}
+
+#clear-selected:active{
+	position: relative;
+	top: 1px;
+}
+
+#instructions{
+	margin: 10px auto;
+	color: #777777;
+	text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+	text-align: center;
+}

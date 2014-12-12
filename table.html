@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Table</title>
+  <link rel="stylesheet" href="table.css"/>
+</head>
+
+<body>
+<div id="content">
+  <header>
+    <h1>Add a new Student:</h1>
+	<input id="new-name" type="text" placeholder="Student Name"/>
+	<select	id="new-gender">
+	  <option value="1">Male</option>
+	  <option value="0">Female</option>
+	</select>
+	<input id="new-age" type="text" placeholder="Student Age"/>
+	<button id="add-student" type="button">Add</button>
+  </header>
+
+  <section id="main">
+    <table id="student-list" border="0">
+	    <tr id="thead">
+		  <td><input id="select-all" type="checkbox"/><label>all</label></td>		  <td>Id</td><td>Name</td><td>Gender</td><td>Age</td><td></td>	
+		</tr>
+	</table>
+	<h1>Table of Students</h1>
+  </section>
+
+  <footer>
+  </footer>
+</div>
+
+<div id="instructions">
+    Double-click to edit.<br/>
+	Written by Leo Xu.
+</div>
+  
+<script src="jquery.js"></script>
+<script src="underscore.js"></script>
+<script src="backbone.js"></script>
+<script src="backbone-localstorage.js"></script>
+<script src="table.js"></script>
+
+<!-- Templates -->
+
+<script type="text/template" id="item-template">
+  <td>
+	<input class="toggle" type="checkbox" <%= selected ? 'checked="checked"' : '' %>/>
+  </td>
+      
+  <td>
+    <%-id%>
+  </td>
+	  
+  <td>
+	<div class="show"><%-name%></div>
+	<input class="edit" name="name" type="text" value="<%-name%>" />
+  </td>
+	  
+  <td>
+	<div class="show"><%-gender==1?'Male':'Female'%></div>
+	<select class="edit" name="gender" value="<%-gender%>">
+	  <option value="1">Male</option>
+	  <option value="0">Female</option>
+	</select>
+  </td>
+	  
+  <td>
+	<div class="show"><%-age%></div>
+	<input class="edit" name="age" type="text" value="<%-age%>" />
+  </td>
+	  
+  <td>
+	<a class="destroy"></a>
+  </td>
+</script>
+
+<script type="text/template" id="stats-template">
+  <% if(selected){ %>
+  <a id="clear-selected">Remove <%= selected %> selected <%= selected == 1 ? 'student' : 'students' %></a>
+  <% } %>
+</script>
+
+</body>
+
+</html>
